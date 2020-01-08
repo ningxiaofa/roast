@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function(){ //添加了一个 prefix 属性方便我们后续管理 API 的版本
+    Route::get('/user', function( Request $request ){
+        return $request->user();
+    });
 });

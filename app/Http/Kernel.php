@@ -35,6 +35,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,// 该中间件为认证用户创建一个新的访问令牌，当认证用户发起请求时，会在请求中附加一个 JWT[JSON Web Token,轻巧规范] 令牌并允许用户访问你的 API
         ],
 
         'api' => [
