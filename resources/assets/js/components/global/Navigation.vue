@@ -72,9 +72,9 @@
             </li>
         </ul>
 
-        <div class="right">
+        <!--<div class="right">
             <img class="avatar" :src="user.avatar" v-show="userLoadStatus == 2"/>
-        </div>
+        </div>-->
 
     </nav>
 </template>
@@ -83,14 +83,14 @@
         // 定义组件的计算属性
         computed: {
             // 从 Vuex 中获取用户加载状态
-            userLoadStatus(){
+          /*  userLoadStatus(){
                 return this.$store.getters.getUserLoadStatus;
-            },
+            },*/
 
             // 从 Vuex 中获取用户信息
-            user(){
+           /* user(){
                 return this.$store.getters.getUser;
-            }
+            }*/
         }
     }
 </script>
