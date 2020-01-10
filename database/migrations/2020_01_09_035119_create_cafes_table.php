@@ -20,8 +20,8 @@ class CreateCafesTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('zip');
-            $table->decimal('latitude', 11, 8); //纬度
-            $table->decimal('longitude', 11, 8); //经度
+            $table->decimal('latitude', 11, 8)->nullable(); //纬度
+            $table->decimal('longitude', 11, 8)->nullable(); //经度
             $table->timestamps();
         });
     }
