@@ -41,4 +41,8 @@ return [
         'redirect' => env('GIT_REDIRECT')
     ],
 
+    'gaode' => [
+        'ws_api_key' => env('GAODE_MAPS_WS_API_KEY'),
+    ],
+
 ];
