@@ -22,7 +22,6 @@ class GaodeMaps
         $apiKey = config('services.gaode.ws_api_key');
         // 构建地理编码 API 请求 URL，默认返回 JSON 格式响应
         $url = 'https://restapi.amap.com/v3/geocode/geo?address=' . $address . '&key=' . $apiKey;
-        dd($url);
 
         // 创建 Guzzle HTTP 客户端发起请求
         $client = new Client();
@@ -30,7 +29,6 @@ class GaodeMaps
         // 发送请求并获取响应数据
         $geocodeResponse = $client->get($url)->getBody();
         $geocodeData = json_decode($geocodeResponse);
-        dd($geocodeData);
 
         // 初始化地理编码位置
         $coordinates['lat'] = null;

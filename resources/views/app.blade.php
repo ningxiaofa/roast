@@ -22,6 +22,7 @@
     <router-view></router-view>
 </div>
 
+<script src="https://webapi.amap.com/maps?v=1.4.8&key=83aaccd712d951a22ee68b90e50c8b53"></script>
 <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 
 </body>
